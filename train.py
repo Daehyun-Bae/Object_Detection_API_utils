@@ -54,12 +54,10 @@ from object_detection.utils import config_util
 
 tf.logging.set_verbosity(tf.logging.INFO)
 
-# parameters
-TRAIN_DIR = '/path/to/save/results'
-PIPELINE_CONFIG_PATH = '/path/to/pipeline.config'
+TRAIN_DIR = 'TRAIN_RESULT_DIR'
+PIPELINE_CONFIG_PATH = 'pipeline_pet.config'
 
-# optional for selecting specific GPU device
-# os.environ['CUDA_VISIBLE_DEVICE'] = '0'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 flags = tf.app.flags
 flags.DEFINE_string('master', '', 'Name of the TensorFlow master to use.')
